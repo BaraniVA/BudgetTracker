@@ -38,7 +38,8 @@ export function FamilyMemberManager({ members, onAddMember, onRemoveMember }: Fa
 
       {isAdding && (
         <form onSubmit={handleSubmit} className="mb-6">
-          <div className="flex gap-4">
+          {/* Replace the current container with this responsive layout */}
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
             <input
               type="text"
               value={newMemberName}
@@ -47,17 +48,17 @@ export function FamilyMemberManager({ members, onAddMember, onRemoveMember }: Fa
               className="flex-1 rounded-lg border-2 border-gray-200 px-4 py-2 text-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200"
               autoFocus
             />
-            <div className="flex flex-wrap gap-2 mt-2">
+            <div className="flex gap-2">
               <button 
                 type="submit"
-                className="px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700"
+                className="flex-1 px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700"
               >
                 Add Member
               </button>
               <button 
                 type="button"
                 onClick={() => setIsAdding(false)}
-                className="px-3 py-1 bg-gray-400 text-white text-sm rounded hover:bg-gray-500"
+                className="flex-1 px-3 py-1 bg-gray-400 text-white text-sm rounded hover:bg-gray-500"
               >
                 Cancel
               </button>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Download, TrendingDown, TrendingUp, PieChart } from 'lucide-react';
+import { TrendingDown, TrendingUp, PieChart } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { jsPDF } from 'jspdf';
 import { Transaction, FamilyMember } from '../types';
@@ -105,13 +105,6 @@ export function MonthlyReport({ transactions, members }: MonthlyReportProps) {
             onChange={(e) => setSelectedMonth(e.target.value)}
             className="rounded-lg border-2 border-gray-200 px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
           />
-          <button
-            onClick={downloadReport}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200"
-          >
-            <Download className="w-5 h-5" />
-            Download Report
-          </button>
         </div>
       </div>
 
