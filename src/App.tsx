@@ -48,7 +48,7 @@ function App() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto py-8 px-4">
+      <main className="max-w-7xl mx-auto py-8 px-3 sm:px-4">
         <div className="space-y-8">
           <Summary
             total={getTotal()}
