@@ -170,6 +170,15 @@ export function MonthlyReport({ transactions, members }: MonthlyReportProps) {
           </div>
         </div>
       </div>
+
+      <div className="mt-4 flex justify-center sm:justify-start">
+        <button 
+          onClick={downloadReport}
+          className="px-3 py-2 bg-green-600 text-white text-sm rounded hover:bg-green-700 w-full sm:w-auto"
+        >
+          Download Report
+        </button>
+      </div>
     </div>
   );
 }

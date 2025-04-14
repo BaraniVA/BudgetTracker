@@ -47,19 +47,21 @@ export function FamilyMemberManager({ members, onAddMember, onRemoveMember }: Fa
               className="flex-1 rounded-lg border-2 border-gray-200 px-4 py-2 text-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200"
               autoFocus
             />
-            <button
-              type="submit"
-              className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-200"
-            >
-              Add
-            </button>
-            <button
-              type="button"
-              onClick={() => setIsAdding(false)}
-              className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-100"
-            >
-              Cancel
-            </button>
+            <div className="flex flex-wrap gap-2 mt-2">
+              <button 
+                type="submit"
+                className="px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700"
+              >
+                Add Member
+              </button>
+              <button 
+                type="button"
+                onClick={() => setIsAdding(false)}
+                className="px-3 py-1 bg-gray-400 text-white text-sm rounded hover:bg-gray-500"
+              >
+                Cancel
+              </button>
+            </div>
           </div>
         </form>
       )}
